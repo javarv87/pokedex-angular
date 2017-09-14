@@ -6,8 +6,8 @@ import { Pokemon } from './pokemon';
 
 @Injectable()
 export class PokemonService {
-  urlPokedex = 'http://pokeapi.co/api/v2/pokedex/2/';
-  urlPokemon = 'http://pokeapi.co/api/v2/pokemon/';
+  urlPokedex = 'https://pokeapi.co/api/v2/pokedex/2/';
+  urlPokemon = 'https://pokeapi.co/api/v2/pokemon/';
   errMsg: string;
 
   constructor(private http: Http) { }
