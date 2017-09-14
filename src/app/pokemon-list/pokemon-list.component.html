@@ -1,0 +1,8 @@
+<ul class="list-view">
+  <li *ngFor="let pokemon of pokemons">
+    <a [routerLink]="['/details', pokemon.id]">
+      <img src="{{pokemon.image()}}" alt="{{pokemon.formattedName()}}">
+      <span>{{pokemon.formattedName()}}</span>
+    </a>
+  </li>
+</ul>
