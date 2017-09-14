@@ -1,0 +1,13 @@
+.container-list {
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.container-list md-card {
+    margin: 15px;
+    flex-grow: 1;
+}
+md-card .img-container {
+    text-align: center;
+}

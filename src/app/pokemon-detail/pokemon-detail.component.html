@@ -1,13 +1,20 @@
-<a href="/">Back</a>
-<div *ngIf="pokemon.name" class="details-container">
-  <img src="{{pokemon.image()}}" alt="{{pokemon.name}}">
-  <h4>Types:</h4>
-  <ul>
-    <li *ngFor="let type of pokemon.types">{{type}}</li>
-  </ul>
-
-  <h4>Stats:</h4>
-  <ul>
-    <li *ngFor="let stat of pokemon.stats">{{stat.name}}: {{stat.value}}</li>
-  </ul>
+<div class="container-detail">
+  <button md-raised-button [routerLink]="['']">BACK</button>
+  <div *ngIf="pokemon.name" class="details-container">
+    <img src="{{pokemon.image()}}" alt="{{pokemon.name}}">
+    <md-tab-group>
+      <md-tab label="Types">
+        <h4>Types:</h4>
+        <ul>
+          <li *ngFor="let type of pokemon.types">{{type}}</li>
+        </ul>
+      </md-tab>
+      <md-tab label="Stats">
+        <h4>Stats:</h4>
+        <ul>
+          <li *ngFor="let stat of pokemon.stats">{{stat.name}}: {{stat.value}}</li>
+        </ul>
+      </md-tab>
+    </md-tab-group>
+  </div>
 </div>

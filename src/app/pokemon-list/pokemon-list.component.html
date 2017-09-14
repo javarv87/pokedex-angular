@@ -1,8 +1,12 @@
-<ul class="list-view">
-  <li *ngFor="let pokemon of pokemons">
-    <a [routerLink]="['/details', pokemon.id]">
-      <img src="{{pokemon.image()}}" alt="{{pokemon.formattedName()}}">
-      <span>{{pokemon.formattedName()}}</span>
-    </a>
-  </li>
-</ul>
+<div class="container-list">
+  <md-card *ngFor="let pokemon of pokemons">
+    <md-card-title>{{pokemon.formattedName()}}</md-card-title>
+    <div class="img-container">
+      <img src="{{pokemon.image()}}" alt="{{pokemon.formattedName()}}" md-card-lg-image>
+    </div>
+    <md-card-actions>
+      <button md-raised-button color="accent" [routerLink]="['/details', pokemon.id]">DETAIL</button>
+    </md-card-actions>
+  </md-card>
+</div>
+
