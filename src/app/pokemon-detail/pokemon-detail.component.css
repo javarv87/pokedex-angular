@@ -1,3 +1,10 @@
 .container-detail {
     padding: 15px;
 }
+md-chip-list {
+    padding: 15px;
+}
+.detail-image {
+    width: 100%;
+    max-width: 150px;
+}

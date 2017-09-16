@@ -46,7 +46,6 @@ export class PokemonService {
   }
 
   get(id: number) {
-    console.log(id);
     const headers = new Headers();
     headers.append('Content-type', 'application/json');
     return this.http.get(`${this.urlPokemon + id}/`, {

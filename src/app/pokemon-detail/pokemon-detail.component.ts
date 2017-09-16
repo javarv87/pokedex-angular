@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
-import { Pokemon } from '../pokemon';
-import { PokemonService } from '../pokemon-service.service';
+import { Pokemon } from './../pokemon';
+import { PokemonService } from './../pokemon-service.service';
 import 'rxjs/add/operator/switchMap';
 
 @Component({
@@ -13,12 +13,11 @@ import 'rxjs/add/operator/switchMap';
 export class PokemonDetailComponent implements OnInit {
   pokemon: Pokemon = new Pokemon();
 
-  constructor(private pokemonService: PokemonService, private route: ActivatedRoute) { }
+  constructor(private pokemonService: PokemonService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.route.paramMap
       .switchMap((params: ParamMap) => this.pokemonService.get(+params.get('id')))
       .subscribe(pokemon => this.pokemon = pokemon);
   }
-
 }
